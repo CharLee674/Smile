@@ -2,10 +2,47 @@
 <html>
   <head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel = "stylesheet" href = "https://s.pageclip.co/v1/pageclip.css" media = "screen">
   </head>
+
   <body>
+    <script src = "https://s.pageclip.co/v1/pageclip.js" charset = "utf-8"></script>
+
     <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <p>Welcome to our version of Fizz Beans ! ;P</p>
+    
+    <form action = "https://send.pageclip.co/localhost:3000" class = "pageclip-form" method = "post">
+
+      <h2> Sign up this form to Register for a chat </h2>
+
+      <p> Name: </p>
+      <input type = "text" name = "name" value = "John Doe" />
+
+      <p> Email: </p>
+      <input type = "email" name = "email" value = "john@doe.com" />
+
+      <p> When are you available? </p>
+      <input type = "checkbox" name = "available [Monday]" value = "Monday" unchecked />
+      <label htmlFor = "Monday" > Monday </label>
+
+      <input type = "checkbox" name = "available [Tuesday]" value = "Tuesday" unchecked />
+      <label htmlFor = "Tuesday" > Tuesday </label>
+
+      <input type = "checkbox" name = "available [Wednesday]" value = "Wednesday" unchecked />
+      <label htmlFor = "Wednesday" > Wednesday </label>
+
+      <input type = "checkbox" name = "available [Thursday]" value = "Thursday" unchecked />
+      <label htmlFor = "Thursday" > Thursday </label>
+
+      <input type = "checkbox" name = "available [Friday]" value = "Friday" unchecked />
+      <label htmlFor = "Friday" > Friday </label>
+
+
+      <p> <button type="submit" class="pageclip-form__submit--dark-loader"> </p>
+      <span> Submit </span>
+      </button>
+    </form>
+
   </body>
+  
 </html>
