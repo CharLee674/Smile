@@ -27,13 +27,13 @@ a {
   padding-top: .8rem;
 }
 
-.navbar-dark . .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link.active,
 .navbar-dark .navbar-nav .nav-link:hover {
   color: #1EBBA3;
 }
 
 .home-inner {
-  background-image: url(../../img/coffee1);
+  background-image: url(../../img/coffee1.jpg);
 }
 
 /*============ BOOTSTRAP BREAK POINTS:
