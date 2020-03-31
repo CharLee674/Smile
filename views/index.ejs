@@ -1,47 +1,122 @@
 <!DOCTYPE html>
-<html>
+<html lang = "en">
   <head>
+    <meta charset = "utf-8">
     <title> <%= title %> </title>
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1">
     <link rel = "stylesheet" href = "https://s.pageclip.co/v1/pageclip.css" media = "screen">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel = "stylesheet" href = "../public/stylesheets/style.css">
+    <link rel = "stylesheet" href = "../public/stylesheets/fixed.css">
   </head>
 
-  <body>
+
+  <body data-spy = "scroll" data-target = "#navbarResponsive">
+    <!-- Script Source Files-->
     <script src = "https://s.pageclip.co/v1/pageclip.js" charset = "utf-8"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!-- End of Script Source Files-->
 
-    <h1><%= title %></h1>
-    <p>Welcome to our version of Fizz Beans ! ;P</p>
-    
-    <form action = "https://send.pageclip.co/hxHPTI2Cl31hye0DSoRXymDFtQJRaNsC" class = "pageclip-form" method = "post">
+    <!-- Start Home Section -->
+    <div id = "home" class = "offset">
+      <!--Start Navigation Bar-->
+      <nav class = "navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <a class = "navbar-brand" href = "#"> 
+          <svg class="bi bi-chat-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6-.097 1.016-.417 2.13-.771 2.966-.079.186.074.394.273.362 2.256-.37 3.597-.938 4.18-1.234A9.06 9.06 0 008 15z"/>
+          </svg>
+          <%= title %>
+        </a>
+        
+        <button class = "navbar-toggler" type = "button" data-toggle = "collapse" data-target = "#navbarResponsive">
+        <span class = "navbar-toggler-icon"></span>
+        </button>
 
-      <h2> Sign up this form to Register for a chat </h2>
+        <div class = "collapse navbar-collapse" id = "navbarResponsive">
+          <ul class = "navbar-nav ml-auto">
+            <li class = "nav-item">
+              <a class = "nav-link" href - "#home">Home</a>
+            </li>
+            <li class = "nav-item">
+              <a class = "nav-link" href - "#about">About</a>
+            </li>
+            <li class = "nav-item">
+              <a class = "nav-link" href - "#signup">Sign Up</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!--End Navigation Bar-->
 
-      <p> Name: </p>
-      <input type = "text" name = "name" placeholder = "John Doe" required/>
+      <div class = "landing">
+        <div class = "home-wrap">
+          <div class = "home-inner">
 
-      <p> Email: </p>
-      <input type = "email" name = "email" placeholder = "john@doe.com" required/>
+          </div>
+        </div>
+      </div>
 
-      <p> When are you available? </p>
-      <input type = "checkbox" name = "available [Monday]" value = "Monday" unchecked />
-      <label htmlFor = "Monday" > Monday </label>
+      <div class = "caption text-center">
+        <br>
+        <br>
+        <br>
+        <h1> Welcome to <%= title %>! </h1>
+        <h4> Yes we will find a better name later</h4>
+        <p class = "lead"> This is me experimenting with bootstrap
+          <br>
+          p.s Is the coding practice for html the same with Java cause I'm doing the what I do for Java </p>
+        <a class = "button btn-outline-dark btn-lg" href = "#signup"> Schedule Chat! </a>
+      </div>
+    <!-- End Home Section-->
 
-      <input type = "checkbox" name = "available [Tuesday]" value = "Tuesday" unchecked />
-      <label htmlFor = "Tuesday" > Tuesday </label>
+    <!-- Start about Section-->
+    <div id = "about" class = "offset text-center">
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <p> just trying smthg </p>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </div>
+    <!-- End about Section-->
 
-      <input type = "checkbox" name = "available [Wednesday]" value = "Wednesday" unchecked />
-      <label htmlFor = "Wednesday" > Wednesday </label>
+    <!-- Start signup Section-->
+    <div id = "signup" class = "offset text-center">
+      <form action = "https://send.pageclip.co/hxHPTI2Cl31hye0DSoRXymDFtQJRaNsC" class = "pageclip-form" method = "post">
 
-      <input type = "checkbox" name = "available [Thursday]" value = "Thursday" unchecked />
-      <label htmlFor = "Thursday" > Thursday </label>
-
-      <input type = "checkbox" name = "available [Friday]" value = "Friday" unchecked />
-      <label htmlFor = "Friday" > Friday </label>
-
-
-      <button type="submit" class="pageclip-form__submit--dark-loader">
-      <span> Submit </span>
-      </button>
-    </form>
+        <h4> Sign up here! </h4>
+  
+        <p> Name: 
+        <input type = "text" name = "name" placeholder = "John Doe" required/>
+        </p>
+  
+        <p> Email: 
+        <input type = "email" name = "email" placeholder = "john@doe.com" required/>
+        </p>
+  
+        <p> When are you available? </p>
+        <input type = "checkbox" name = "available [Monday]" value = "Monday" unchecked />
+        <label htmlFor = "Monday" > Monday </label>
+       
+  
+        <input type = "checkbox" name = "available [Tuesday]" value = "Tuesday" unchecked />
+        <label htmlFor = "Tuesday" > Tuesday </label>
+  
+        <input type = "checkbox" name = "available [Wednesday]" value = "Wednesday" unchecked />
+        <label htmlFor = "Wednesday" > Wednesday </label>
+  
+        <input type = "checkbox" name = "available [Thursday]" value = "Thursday" unchecked />
+        <label htmlFor = "Thursday" > Thursday </label>
+  
+        <input type = "checkbox" name = "available [Friday]" value = "Friday" unchecked />
+        <label htmlFor = "Friday" > Friday </label>
+  
+        <br>
+        <button type="submit" class = "btn btn-primary">
+        <span> Submit </span>
+        </button>
+      </form>
+    </div>
+    <!-- End signup Section-->
 
   </body>
 
