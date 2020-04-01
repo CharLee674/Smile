@@ -1,26 +1,37 @@
 //let pageclip, promise
 const Pageclip = require('pageclip')
+const fs = require('fs') 
 let pageclip, promise
 
-// Private API key goes down here below: (DO NOT PUSH IT)
-pageclip = new Pageclip('')
+// Private API key goes down here below:
+pageclip = new Pageclip('api_2805h7Z5MUyq63Y81BMPSTOcwCnMby0O')
+
+var thing;
+
+var result;
+
 
 // Fetch items from the default form
 promise = pageclip.fetch().then((response) => {
-    console.log(
-      response.status, // 200
-      response.form, // 'default'
-      response.data    // [Item]
-    )
+    response.status, // 200
+    response.form, // 'default'
+    thing = response.data    // [Item]
+
+
+    var hello = 'hello'
+    console.log(thing.payload)
+    //console.log(result);
+    console.log(thing);
   })
-var data = JSON.stringify(promise);
 
-console.log(data);
 
-const fs = require('fs') 
+function saveData(data){
+  const fs = require('fs')
 
-fs.writeFile('Output.json', data, (err) => { 
+  fs.writeFile('Output.txt', JSON.stringify(data), (err) => { 
       
     // In case of a error throw err. 
     if (err) throw err; 
-}) 
+  }) 
+
+}
