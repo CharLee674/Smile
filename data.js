@@ -4,7 +4,7 @@ const fs = require('fs')
 let pageclip, promise
 
 // Private API key goes down here below:
-pageclip = new Pageclip('api_2805h7Z5MUyq63Y81BMPSTOcwCnMby0O')
+pageclip = new Pageclip('')
 
 var thing;
 
