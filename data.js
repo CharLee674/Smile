@@ -4,7 +4,7 @@ const fs = require('fs')
 let pageclip, promise
 
 // Private API key goes down here below:
-pageclip = new Pageclip('')
+pageclip = new Pageclip('api_2805h7Z5MUyq63Y81BMPSTOcwCnMby0O')
 
 var thing;
 
@@ -19,9 +19,10 @@ promise = pageclip.fetch().then((response) => {
 
 
     var hello = 'hello'
-    console.log(thing.payload)
     //console.log(result);
-    console.log(thing);
+    for (var i = 0; i < thing.length; i++){
+      console.log(thing[i])
+    }
   })
 
 
